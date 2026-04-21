@@ -20,5 +20,13 @@ public class UserService {
         return userRepository.save(request);
     }
 
+    public List<User> getAlluser(){
+        return  userRepository.findAll();
+    }
+
+    public User getUserById(String id){
+        return userRepository.findById(id).orElse(null);
+    }
+
 
 }
